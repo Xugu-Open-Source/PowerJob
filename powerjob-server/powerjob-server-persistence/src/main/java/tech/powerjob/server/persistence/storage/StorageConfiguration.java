@@ -28,6 +28,18 @@ public class StorageConfiguration {
     }
 
     @Bean
+    @Conditional(XuGuSeriesDfsService.XuGuSeriesCondition.class)
+    public DFsService initXuGuDbFs() {
+        return new XuGuSeriesDfsService();
+    }
+
+    @Bean
+    @Conditional(CAESeriesDfsService.CAESeriesCondition.class)
+    public DFsService initCAEDbFs() {
+        return new CAESeriesDfsService();
+    }
+
+    @Bean
     @Conditional(AliOssService.AliOssCondition.class)
     public DFsService initAliOssFs() {
         return new AliOssService();
