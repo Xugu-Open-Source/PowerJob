@@ -45,6 +45,19 @@
             <artifactId>powerjob-common</artifactId>
             <version>${powerjob.common.version}</version>
         </dependency>
+        <!-- xugu -->
+
+        <dependency>
+            <groupId>com.xugudb</groupId>
+            <artifactId>xugu-jdbc</artifactId>
+            <version>12.3.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
         <!-- mysql -->
         <dependency>
