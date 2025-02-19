@@ -49,6 +49,12 @@
 
         <dependency>
             <groupId>com.xugudb</groupId>
+            <artifactId>xugu-dialect</artifactId>
+            <version>5.4.33</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xugudb</groupId>
             <artifactId>xugu-jdbc</artifactId>
             <version>12.3.3</version>
             <exclusions>
