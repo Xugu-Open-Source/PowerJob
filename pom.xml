@@ -61,6 +61,23 @@
     </properties>
 
     <dependencies>
+        <!--xugu-->
+        <dependency>
+            <groupId>com.xugudb</groupId>
+            <artifactId>xugu-jdbc</artifactId>
+            <version>12.3.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.xugudb</groupId>
+            <artifactId>xugu-dialect</artifactId>
+            <version>5.4.33</version>
+        </dependency>
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
