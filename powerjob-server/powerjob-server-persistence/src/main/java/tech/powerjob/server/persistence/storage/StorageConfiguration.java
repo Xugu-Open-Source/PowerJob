@@ -28,6 +28,12 @@ public class StorageConfiguration {
     }
 
     @Bean
+    @Conditional(XuGuSeriesDfsService.XuGuSeriesCondition.class)
+    public DFsService initXuGuDbFs() {
+        return new XuGuSeriesDfsService();
+    }
+
+    @Bean
     @Conditional(PostgresqlSeriesDfsService.PostgresqlSeriesCondition.class)
     public DFsService initPGDbFs() {
         return new PostgresqlSeriesDfsService();
